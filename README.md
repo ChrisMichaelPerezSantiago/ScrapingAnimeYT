@@ -1,4 +1,4 @@
-# Scraping AnimeYT WebSite :fire: 😸
+# Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS)
 
 **Set up Cloud Storage**
 In the server folder create a file with the configuarion of Cloud Storage.
