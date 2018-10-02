@@ -1,5 +1,15 @@
 # Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS)
 
+**Front-End**
+- Vuejs/Vuex
+
+**Back-End**
+- Nodejs
+- Python (Flask)
+
+**Module** 
+[cheerio](https://cheerio.js.org/)
+
 **Set up Cloud Storage**
 In the server folder create a file with the configuration of Cloud Storage.
 
