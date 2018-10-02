@@ -1,6 +1,6 @@
 # Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS)
 
-![alt](https://commons.wikimedia.org/wiki/File:Vue.png) ![alt](https://instructobit.com/posts/111/post_preview_image(111).jpg)
+![alt](https://vuejs.org/images/logo.png) ![alt](https://instructobit.com/posts/111/post_preview_image(111).jpg)
 
 
 **Front-End**
