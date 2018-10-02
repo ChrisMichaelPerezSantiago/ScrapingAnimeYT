@@ -1,6 +1,6 @@
 # Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS)
 
-![alt](https://raw.githubusercontent.com/tanrax/workshop-flask-with-vuejs/master/flaskyvuejs.jpg)
+![alt](https://raw.githubusercontent.com/tanrax/workshop-flask-with-vuejs/master/flaskyvuejs.jpg){:height="800px" width="400px"}.
 
 
 **Front-End**
