@@ -1,6 +1,6 @@
 # Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS)
 
-![alt](https://vuejs.org/images/logo.png) ![alt](https://instructobit.com/posts/111/post_preview_image(111).jpg)
+![alt](https://raw.githubusercontent.com/tanrax/workshop-flask-with-vuejs/master/flaskyvuejs.jpg)
 
 
 **Front-End**
