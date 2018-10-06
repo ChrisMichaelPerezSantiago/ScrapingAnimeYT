@@ -63,3 +63,19 @@ const getRecentSeries = async () =>{
     });
     await(Promise.all(promises));
 }
+
+
+// FIX ENTRY POINTS
+const getAnimeNews = async () =>{
+    const url = 'https://www.animeyt.tv';
+    const response = await fetch(url);
+    const body = await response.text();
+    const $ = cheerio.load(body);
+
+    const promises = [];
+
+    $('div.WdgtCn.capitulos-grid__item').children().each((index , item) =>{
+        const $item = $(item);
+        const title = $item.find('h3.Title').children().text();        
+    });
+}
