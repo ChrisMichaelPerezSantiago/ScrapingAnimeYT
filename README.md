@@ -1,7 +1,20 @@
 # Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS)
 
+![alt](https://raw.githubusercontent.com/tanrax/workshop-flask-with-vuejs/master/flaskyvuejs.jpg)
+
+
+**Front-End**
+- Vuejs/Vuex
+
+**Back-End**
+- Nodejs
+- Python (Flask)
+
+**Module** 
+[cheerio](https://cheerio.js.org/)
+
 **Set up Cloud Storage**
-In the server folder create a file with the configuarion of Cloud Storage.
+In the server folder create a file with the configuration of Cloud Storage.
 
 ```javascript
 const firebase = require('firebase');
