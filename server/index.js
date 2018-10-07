@@ -64,18 +64,36 @@ const getRecentSeries = async () =>{
     await(Promise.all(promises));
 }
 
-
-// FIX ENTRY POINTS
-const getAnimeNews = async () =>{
-    const url = 'https://www.animeyt.tv';
+const getAnimes = async (page = 1) =>{
+    const url = `https://www.animeyt.tv/animes/?page=${page}`;
     const response = await fetch(url);
     const body = await response.text();
-    const $ = cheerio.load(body);
+    const $ = cheerio.load(body);  
 
-    const promises = [];
+    const promises = []
 
-    $('div.WdgtCn.capitulos-grid__item').children().each((index , item) =>{
+    $('article.anime').each((index , item) =>{
         const $item = $(item);
-        const title = $item.find('h3.Title').children().text();        
+        const title = $item.find('h3.anime__title').text();
+        const date = $item.find('div.anime__date').children().remove().end().text().trim();
+        const tags = [$item.find('span.anime__tag').text()];
+        const link = $item.find('a.anime__synopsis-container').attr('href');
+        const img = $item.find('a.anime__img-container').find('img').attr('src');
+        const gender = []
+        $item.find('div.anime__genres').children().each((index , item) =>{
+            const $item = $(item);
+            gender[index] = $item.text();
+        });
+        const animes = {
+            title,
+            date,
+            img,
+            link,
+            tags,
+            gender
+        }
+        const animeRef = db.collection('animes').doc();
+        promises.push(animeRef.set(animes));
     });
+    await(Promise.all(promises));
 }
