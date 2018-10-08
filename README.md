@@ -1,7 +1,7 @@
-# Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS)
+# Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS) + FeathersJS
 
 ![alt](https://raw.githubusercontent.com/tanrax/workshop-flask-with-vuejs/master/flaskyvuejs.jpg)
-
+![alt](https://i0.wp.com/gorrion.io/blog/wp-content/uploads/2018/02/Screenshot-at-lut-04-18-11-09.png?resize=700%2C453&ssl=1)
 
 **Front-End**
 - Vuejs/Vuex
@@ -9,6 +9,9 @@
 **Back-End**
 - Nodejs
 - Python (Flask)
+
+**Middleware**
+- FeathersJS
 
 **Module** 
 [cheerio](https://cheerio.js.org/)
@@ -36,6 +39,23 @@ db.settings({
 });
 
 module.exports = db;
+```
+
+**Connection between feathersjs and the client**
+Create feathers-vuex.js file in client/src and add this scripts ...
+
+```javascript
+import feathers from '@feathersjs/feathers';
+import socketio from '@feathersjs/socketio-client';
+import auth from '@feathersjs/authentication-client';
+import io from 'socket.io-client';
+
+const socket = io('http://localhost:3030', {transports: ['websocket']});
+const feathersClient = feathers()
+  .configure(socketio(socket))
+  .configure(auth({ storage: window.localStorage }))
+
+  export default feathersClient;
 ```
 
 **Author**
