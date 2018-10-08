@@ -1,16 +1,17 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import feathersVuex from 'feathers-vuex';
+import feathersClient from './feathers-client';
+const { auth, FeathersVuex } = feathersVuex(feathersClient, { idField: '_id' })
 
-Vue.use(Vuex)
+Vue.use(Vuex);
+Vue.use(FeathersVuex);
+
 
 export default new Vuex.Store({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  }
-})
+  plugins:[
+    auth({
+      userService: 'users'
+    }),
+  ],
+});
