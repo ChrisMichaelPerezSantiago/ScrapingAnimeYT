@@ -1,7 +1,7 @@
 # Scraping AnimeYT WebSite :fire: 😸 (IN PROGRESS) + FeathersJS
 
 ![alt](https://raw.githubusercontent.com/tanrax/workshop-flask-with-vuejs/master/flaskyvuejs.jpg)
-![alt](https://cdn-images-1.medium.com/max/1200/1*5d2EDhCZcUWKbaVjRCq9Vg.png)
+![alt](https://feathersjs.com/img/facebook-share-image.png)
 
 **Front-End**
 - Vuejs/Vuex
