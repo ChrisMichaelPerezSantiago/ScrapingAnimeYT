@@ -38,6 +38,7 @@
           <path d="M252,12 L252,103.14209" id="Stroke-32" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none"></path>       
       </svg>
         <v-btn :to="{name: 'signup'}">SignUp</v-btn>
+        <v-btn :to="{name: 'login'}">LogIn</v-btn>
       </v-layout>
     </v-slide-y-transition>
   </v-container>

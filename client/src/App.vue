@@ -1,7 +1,16 @@
 <template>
   <v-app>
     <v-toolbar dark>
-    </v-toolbar>
+    <v-toolbar-title>Anime</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-toolbar-items class="hidden-sm-and-down" v-if="!user">
+      <v-btn flat :to="{name: 'signup'}">SignUp</v-btn>
+      <v-btn flat :to="{name: 'login'}">LogIn</v-btn>
+    </v-toolbar-items>
+     <v-toolbar-items class="hidden-sm-and-down" v-if="user">
+      <v-btn flat @click="logout">Logout</v-btn>
+    </v-toolbar-items>
+  </v-toolbar>
     <v-content>
       <router-view/>
     </v-content>
@@ -11,25 +20,30 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  name: 'App',
-  data () {
-    return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire'
-      }],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+<script>  
+  import { mapState , mapActions } from 'vuex';
+
+  export default {
+    name: 'App',
+    data () {
+      return {
+        fixed: false
+      }
+    },
+
+    computed:{
+      ...mapState('auth' , {user: 'payload'}),
+    },
+
+    methods:{
+      ...mapActions('auth' , { authLogout: 'logout' }),
+      logout(){
+        this.authLogout().then(() =>{
+          this.$router.push('/login');
+        })
+      }
     }
   }
-}
 </script>
 
 <style>
