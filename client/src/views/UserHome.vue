@@ -22,14 +22,30 @@
       }
     },
 
+    created(){
+      this.getAllAnime();
+    },
+
     methods:{
       searchAnime(){
         db.collection('animes').where('title' , '==' , this.search).get()
-        .then(data =>{
-          data.forEach((doc) =>{
-            console.log(doc.id , " => " , doc.data());
+          .then(data =>{
+            data.forEach((doc) =>{
+              console.log(doc.id , " => " , doc.data());
+            });
           })
-        })
+          .catch((error) =>{
+            console.log("Error getting document: " , error);
+          })
+      },
+
+      getAllAnime(){
+        db.collection('animes').get()
+          .then((data) =>{
+            data.forEach((doc) =>{
+              console.log(doc.id , " => " , doc.data());
+            })
+          })
       }
     }
   }
