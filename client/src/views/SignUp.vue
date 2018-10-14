@@ -3,8 +3,7 @@
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
         
-        
-          <svg width="300px" height="300px" viewBox="3 11 252 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg width="300px" height="300px" viewBox="3 11 252 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M4,80.3307481 L4,103.14209" id="Stroke-3-Copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none"></path>
           <path d="M12,80.3307481 L12,103.14209" id="Stroke-3-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none"></path>
           <path d="M20,80.3307481 L20,103.14209" id="Stroke-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill="none"></path>

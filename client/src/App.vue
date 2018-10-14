@@ -7,9 +7,19 @@
       <v-btn flat :to="{name: 'signup'}">SignUp</v-btn>
       <v-btn flat :to="{name: 'login'}">LogIn</v-btn>
     </v-toolbar-items>
-     <v-toolbar-items class="hidden-sm-and-down" v-if="user">
-      <v-btn flat @click="logout">Logout</v-btn>
+     <v-toolbar-items  class="hidden-sm-and-down" v-if="user">
+      <v-btn primary flat @click="logout">Logout</v-btn>
     </v-toolbar-items>
+       <v-menu class="hidden-md-and-up">
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+        <v-list>
+          <v-btn flat :to="{name: 'signup'}"></v-btn>
+          <v-btn flat :to="{name: 'login'}">LogIn</v-btn>
+          <v-list v-if="user">
+            <v-btn primary flat @click="logout">Logout</v-btn>
+          </v-list>
+        </v-list>
+      </v-menu>
   </v-toolbar>
     <v-content>
       <router-view/>

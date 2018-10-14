@@ -97,3 +97,4 @@ const getAnimes = async (page = 1) =>{
     });
     await(Promise.all(promises));
 }
+
