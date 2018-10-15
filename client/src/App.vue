@@ -56,8 +56,10 @@
   }
 </script>
 
+<!--
 <style>
   #app{
       background: #18212D;
   }
 </style>
+-->
